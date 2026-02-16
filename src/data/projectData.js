@@ -301,7 +301,7 @@ export const projects = [
         videos: [
             `${basePath}/coding - done/version 1.2.mp4`,
             `${basePath}/coding - done/version 2.0.mp4`,
-            `${basePath}/coding - done/final version.mov`,
+            `${basePath}/coding - done/final version.mp4`,
         ],
         model3d: null,
         github: null,

@@ -33,6 +33,18 @@ Ensure your project is clean and all changes are committed.
     git push -u origin main
     ```
 
+### Alternative: Using GitHub Desktop
+
+If you prefer a GUI over the command line:
+
+1.  Open **GitHub Desktop**.
+2.  File > **Add Local Repository**.
+3.  Choose this folder: `c:\Users\adith\OneDrive\Documents\a_g\projects\portfolio 1sa_1`
+4.  It will say "This directory does not appear to be a Git repository." Click **create a repository here**.
+5.  **Publish repository** to GitHub.
+    *   Uncheck "Keep this code private" if you want a free Vercel deploy.
+6.  Once published, go to Vercel and import the new repository.
+
 ## 3. Deploy to Vercel
 
 1.  Go to your [Vercel Dashboard](https://vercel.com/dashboard).
@@ -65,3 +77,36 @@ Once the deployment is complete, Vercel will give you a live URL (e.g., `https:/
 
 *   **404 on Refresh:** Ensure `vercel.json` exists in the root with the `rewrites` configuration.
 *   **Missing Assets:** If images/videos are missing, check that they are in the `public/portfolio` folder and referenced correctly in `projectData.js` (paths should start with `/portfolio`).
+
+## Alternative: Deploy from Local Disk (No GitHub)
+
+If you prefer **not** to use GitHub, you can deploy directly from your command line using the Vercel CLI.
+
+1.  **Install Vercel CLI:**
+    Open your terminal and run:
+    ```bash
+    npm install -g vercel
+    ```
+2.  **Login:**
+    Run:
+    ```bash
+    vercel login
+    ```
+    (Follow the email instructions).
+3.  **Deploy:**
+    Run this command in your project folder:
+    ```bash
+    vercel
+    ```
+    *   Set up and deploy? **Yes**
+    *   Which scope? **(Select your account)**
+    *   Link to existing project? **No**
+    *   Project name? **portfolio-v1** (or your choice)
+    *   Directory? **./** (default)
+    *   **Auto-detected capabilities:** It should detect Vite. If asked to override settings, say **No**.
+
+4.  **Production Deploy:**
+    The previous command deploys a "Preview". To ship to production:
+    ```bash
+    vercel --prod
+    ```
