@@ -109,6 +109,18 @@ If you prefer **not** to use GitHub, you can deploy directly from your command l
 
 4.  **Production Deploy:**
     The previous command deploys a "Preview". To ship to production:
-    ```bash
-    vercel --prod
-    ```
+
+## 6. How to Get Indexed Quickly (SEO)
+
+To get your site on Google faster:
+
+1.  **Google Search Console:**
+    *   Go to [Google Search Console](https://search.google.com/search-console).
+    *   Add your property (URL prefix: `https://your-site.vercel.app`).
+    *   Verify ownership (Vercel usually handles this if you use the HTML tag method, or you can add a DNS record).
+2.  **Submit Sitemap:**
+    *   In the Search Console sidebar, click **Sitemaps**.
+    *   Enter `sitemap.xml` in the box.
+    *   Click **Submit**.
+    *   *Google will now crawl every page listed in your sitemap immediately.*
+

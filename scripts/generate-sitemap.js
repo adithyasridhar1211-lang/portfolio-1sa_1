@@ -6,7 +6,7 @@ import { projects } from '../src/data/projectData.js'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const BASE_URL = 'https://adithyasridhar.com'
+const BASE_URL = 'https://adithyasridhar.dev'
 const OUT_DIR = path.resolve(__dirname, '../dist')
 
 function generateSitemap() {
