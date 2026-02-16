@@ -1,6 +1,7 @@
 import { useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import Lenis from 'lenis'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -91,6 +92,7 @@ function App() {
                     </Suspense>
                 </AnimatePresence>
                 <Footer />
+                <Analytics />
             </div>
         </Router>
     )
