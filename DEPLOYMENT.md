@@ -53,6 +53,7 @@ If you prefer a GUI over the command line:
 4.  **Configure Project:**
     *   **Framework Preset:** `Vite` (Vercel should detect this automatically).
     *   **Root Directory:** `./` (default).
+    *   **Install Command:** `npm install --legacy-peer-deps` (Important: fixes React 19 dependency conflicts).
     *   **Build Command:** `npm run build`
         *   *Note:* This command runs `vite build && node scripts/generate-sitemap.js`, which automatically generates your `sitemap.xml` and `robots.txt`.
     *   **Output Directory:** `dist` (default).
@@ -76,6 +77,7 @@ Once the deployment is complete, Vercel will give you a live URL (e.g., `https:/
 ## Troubleshooting
 
 *   **404 on Refresh:** Ensure `vercel.json` exists in the root with the `rewrites` configuration.
+*   **Deployment Error (ERESOLVE):** If `npm install` fails with peer dependency errors, go to Vercel Project Settings > Build & Development and change **Install Command** to `npm install --legacy-peer-deps`.
 *   **Missing Assets:** If images/videos are missing, check that they are in the `public/portfolio` folder and referenced correctly in `projectData.js` (paths should start with `/portfolio`).
 
 ## Alternative: Deploy from Local Disk (No GitHub)
